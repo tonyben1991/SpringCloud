@@ -1,0 +1,15 @@
+server:
+  port: 9000
+spring:
+  application:
+    name: invoker
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+provider:
+  ribbon:
+    listOfServers: http://localhost:8082/,http://localhost:8081/
+    NFLoadBalancerRuleClassName: tech.tonyben1991.invoker.MyRule

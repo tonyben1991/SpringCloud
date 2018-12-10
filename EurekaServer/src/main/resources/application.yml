@@ -1,0 +1,16 @@
+#不要将该应用注册为客户端
+server:
+  port: 8761
+eureka:
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+logging:
+  level:
+    com.netflix: INFO
+security:
+  basic:
+    enabled: true
+  user:
+    name: eureka
+    password: 123456
